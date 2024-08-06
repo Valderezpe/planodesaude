@@ -18,6 +18,12 @@ public class plano {
     private Boolean dataNascimento;
     private String dataInclusao;
     private Boolean dataAtualizacao;
+    
+   
+	public plano(String string, String string2, String string3, String string4, String string5, String string6,
+            boolean b, int i) {
+        //TODO Auto-generated constructor stub
+    }
     public Long getId() {
         return id;
     }
