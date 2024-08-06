@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.planosaude.planodesaude.entity.plano;
 import com.planosaude.planodesaude.service.planosaudeService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/planos")
 public class PlanoSaudeController {
@@ -25,7 +27,7 @@ public class PlanoSaudeController {
     }
 
     @PostMapping
-    List<plano> create (@RequestBody plano plano) {
+    List<plano> create (@RequestBody @Valid plano plano) {
         return planosaudeService.create(plano);
     }
 

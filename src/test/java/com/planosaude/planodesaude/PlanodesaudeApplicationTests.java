@@ -35,7 +35,15 @@ class PlanodesaudeApplicationTests {
 	}
 
 	@Test
-	void testCreatePlanoSaudeFailure() {
+	void testCreatePlanoFailure() {
+		webTestClient
+		.post()
+		.uri("/planos")
+		.bodyValue(
+			new plano( "", "","", null, null, null, false, 0)
+		).exchange()
+		.expectStatus().isBadRequest();
+
 	}
 
 }
